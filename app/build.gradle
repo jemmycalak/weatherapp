@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -18,6 +19,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        buildTypes.each {
+            it.buildConfigField 'String', 'SERVER', SERVER
+            it.buildConfigField 'String', 'SERVER_IMAGE', SERVER_IMAGE
+            it.buildConfigField 'String', 'APIKEY', APIKEY
+            it.buildConfigField 'String', 'DATABASE_NAME', DATABASE_NAME
+            it.buildConfigField 'int', 'DATABASE_VERSION', DATABASE_VERSION
+        }
     }
 }
 
@@ -31,4 +40,24 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
+
+    implementation 'com.google.dagger:dagger:2.22'
+    implementation 'com.google.dagger:dagger-android-support:2.22'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
+    kapt 'com.google.dagger:dagger-compiler:2.16'
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_address_dashboard">24sp</dimen>
+    <dimen name="textsize_celciusbig_dashboard">96sp</dimen>
+    <dimen name="textsize_date_dashboard">16sp</dimen>
+
+    <dimen name="padding_dashboard_top">55px</dimen>
+    <dimen name="padding_dashboard_bottom">50px</dimen>
+    <dimen name="margin_date_dashboard">8px</dimen>
+    <dimen name="margin_celciusbig_dashboard">36px</dimen>
+    <dimen name="margin_desccoud_dashboard">9px</dimen>
+    <dimen name="margintop_cloud_dashboard">14px</dimen>
+    <dimen name="padding_hours_dashboard">9px</dimen>
+    <dimen name="margintop_cloud_hours">17px</dimen>
+    <dimen name="margintop_celcius_hours">23px</dimen>
+    <dimen name="marginTop_hours">24dp</dimen>
+    <dimen name="paddingLeft_hours">9dp</dimen>
+    <dimen name="textsize_celcius_hours">14sp</dimen>
+    <dimen name="image_cloud_hours">24dp</dimen>
+    <dimen name="marginLeft_recyclerHours">15dp</dimen>
+    <dimen name="marginLeft_date">24dp</dimen>
+    <dimen name="marginTop_date">10dp</dimen>
+    <dimen name="marginLeft_cloud_date">17dp</dimen>
+
+</resources>

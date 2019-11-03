@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/paddingLeft_hours"
+    android:paddingTop="@dimen/marginTop_hours"
+    android:paddingRight="@dimen/paddingLeft_hours"
+    android:paddingBottom="@dimen/marginTop_hours">
+
+    <TextView
+        android:id="@+id/hours"
+        style="@style/text_hours_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10AM" />
+
+    <ImageView
+        android:id="@+id/cloudHours"
+        android:layout_width="@dimen/image_cloud_hours"
+        android:layout_height="@dimen/image_cloud_hours"
+        android:layout_marginTop="@dimen/margintop_cloud_hours"
+        android:src="@drawable/ic_cloud_cloudy" />
+
+    <TextView
+        android:id="@+id/celciusHours"
+        style="@style/text_celcius_hours_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margintop_celcius_hours"
+        android:text="18\u00B0" />
+
+</LinearLayout>
