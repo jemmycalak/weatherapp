@@ -38,4 +38,9 @@
         <item name="android:textSize">@dimen/textsize_celcius_hours</item>
     </style>
 
+    <style name="text_error_network" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/textsize_error_network</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
 </resources>

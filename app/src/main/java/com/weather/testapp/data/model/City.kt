@@ -3,13 +3,12 @@ import com.google.gson.annotations.SerializedName
 
 
 data class City (
-
-	@SerializedName("id") val id : Int,
-	@SerializedName("name") val name : String,
-	@SerializedName("coord") val coord : Coord,
-	@SerializedName("country") val country : String,
-	@SerializedName("population") val population : Int,
-	@SerializedName("timezone") val timezone : Int,
-	@SerializedName("sunrise") val sunrise : Int,
-	@SerializedName("sunset") val sunset : Int
+	@SerializedName("id") var id : Int,
+	@SerializedName("name") var name : String,
+	@SerializedName("coord") var coord : Coord,
+	@SerializedName("country") var country : String,
+	@SerializedName("population") var population : Int,
+	@SerializedName("timezone") var timezone : Int,
+	@SerializedName("sunrise") var sunrise : Int,
+	@SerializedName("sunset") var sunset : Int
 )

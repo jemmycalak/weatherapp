@@ -3,6 +3,7 @@ package com.weather.testapp.app.base
 import android.app.Application
 import com.weather.testapp.app.di.component.AppComponent
 import com.weather.testapp.app.di.component.DaggerAppComponent
+import com.weather.testapp.app.di.module.DataLocalModule
 import com.weather.testapp.app.di.module.NetworkModule
 import com.weather.testapp.app.di.module.RetrofitModule
 
@@ -16,6 +17,7 @@ class WeatherApp : Application(){
         appComponent = DaggerAppComponent.builder()
             .retrofitModule(RetrofitModule())
             .networkModule(NetworkModule())
+            .dataLocalModule(DataLocalModule(this))
             .build()
     }
 }

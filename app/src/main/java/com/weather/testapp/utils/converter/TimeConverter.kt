@@ -18,7 +18,7 @@ class TimeConverter {
 
     fun HHamPM(date:String):String{
         val d1 = format.parse(date)
-        val nFormat = SimpleDateFormat("HH a")
+        val nFormat = SimpleDateFormat("HHa")
         return nFormat.format(d1!!)
     }
 

@@ -5,7 +5,7 @@ import com.weather.testapp.ui.main.MainActivity
 import dagger.Component
 
 @WeatherScope
-@Component(modules = [WeatherModule::class,WeatherAdapetrModule::class], dependencies = [AppComponent::class])
+@Component(modules = [WeatherModule::class, WeatherAdapetrModule::class], dependencies = [AppComponent::class])
 interface WeatherComponent {
     fun inject(activity:MainActivity)
 }

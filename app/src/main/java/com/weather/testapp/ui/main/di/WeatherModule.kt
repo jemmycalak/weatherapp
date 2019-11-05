@@ -1,9 +1,12 @@
 package com.weather.testapp.ui.main.di
 
+import com.weather.testapp.data.local.sql.weather.WeatherSQL
+import com.weather.testapp.data.local.sql.weather.WeatherSQLPresenter
 import com.weather.testapp.data.online.API
 import com.weather.testapp.data.online.presenter.weather.WeatherListener
 import com.weather.testapp.ui.main.WeatherPresenter
 import com.weather.testapp.data.online.presenter.weather.WeatherPresenter as presenters
+
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -22,4 +25,5 @@ class WeatherModule {
     fun provideWeather(presenter: presenters<WeatherListener>): WeatherPresenter<WeatherListener> {
         return presenter
     }
+
 }

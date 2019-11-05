@@ -1,102 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/topBackground"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_blue_top"
-            android:paddingTop="@dimen/padding_dashboard_top"
-            android:paddingBottom="@dimen/padding_dashboard_bottom"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/address"
-                style="@style/text_address_dashboard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/date"
-                style="@style/text_date_dashboard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_date_dashboard"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/address" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blue_top"
+                    android:paddingTop="@dimen/padding_dashboard_top"
+                    android:paddingBottom="@dimen/padding_dashboard_bottom"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/celcius"
-                style="@style/text_celciusbig_dashboard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_celciusbig_dashboard"
-                android:ellipsize="marquee"
-                android:text="0\u00B0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/date" />
+                    <TextView
+                        android:id="@+id/address"
+                        style="@style/text_address_dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margintop_cloud_dashboard"
-                android:orientation="horizontal"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/celcius">
+                    <TextView
+                        android:id="@+id/date"
+                        style="@style/text_date_dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_date_dashboard"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/address" />
 
-                <ImageView
-                    android:id="@+id/cloudNormal"
-                    android:layout_width="@dimen/image_cloud_hours"
-                    android:layout_height="@dimen/image_cloud_hours"
-                    android:tint="@color/white" />
+                    <TextView
+                        android:id="@+id/celcius"
+                        style="@style/text_celciusbig_dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_celciusbig_dashboard"
+                        android:ellipsize="marquee"
+                        android:text="0\u00B0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/date" />
 
-                <TextView
-                    android:id="@+id/descCloud"
-                    style="@style/text_date_dashboard"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margintop_cloud_dashboard"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/celcius">
+
+                        <ImageView
+                            android:id="@+id/cloudNormal"
+                            android:layout_width="@dimen/image_cloud_hours"
+                            android:layout_height="@dimen/image_cloud_hours"
+                            android:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/descCloud"
+                            style="@style/text_date_dashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_desccoud_dashboard" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewHours"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_desccoud_dashboard" />
-            </LinearLayout>
+                    android:layout_marginLeft="@dimen/marginLeft_recyclerHours"
+                    android:layout_marginRight="@dimen/marginLeft_recyclerHours"
+                    android:overScrollMode="never"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topBackground" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:id="@+id/ruler"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewHours" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewHours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/marginLeft_recyclerHours"
-            android:layout_marginRight="@dimen/marginLeft_recyclerHours"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topBackground" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    app:layout_constraintTop_toBottomOf="@+id/ruler" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
 
-        <View
-            android:id="@+id/ruler"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerViewHours" />
+        <include layout="@layout/layout_error_network" />
+    </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/ruler" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

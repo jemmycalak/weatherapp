@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 open class Presenter<V : BaseView>
 @Inject
-constructor(): BasePresenter<V> {
+constructor(): BasePresenter<V>{
 
     lateinit var view: V
 

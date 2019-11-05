@@ -21,5 +21,7 @@
     <dimen name="marginLeft_date">24dp</dimen>
     <dimen name="marginTop_date">10dp</dimen>
     <dimen name="marginLeft_cloud_date">17dp</dimen>
+    <dimen name="marginTop_textErrorNetwork">10dp</dimen>
+    <dimen name="textsize_error_network">16sp</dimen>
 
 </resources>
