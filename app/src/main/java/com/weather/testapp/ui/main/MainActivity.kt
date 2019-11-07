@@ -71,7 +71,7 @@ class MainActivity : WeatherActivity(), WeatherListener, BaseView, SwipeRefreshL
     ) {
         try {
             val temp = Math.round(currentWeather.main.temp).toString()
-            if(t.city!!.name != null) address.text = t.city!!.name+""
+            address.text = t.city!!.name+""
             date.text = TimeConverter().EEEEddMMMMyyyy(currentWeather.dt_txt)
             celcius.text = temp + "\u00B0"
             descCloud.text = CapitalLetter().CapsSentences(currentWeather.weather[0].description)
