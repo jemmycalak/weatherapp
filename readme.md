@@ -5,5 +5,5 @@ Built With :
 * mvp
 * sqlite
 * dagger
-* [Weather Service](http://api.openweathermap.org/)
 ```
+[Weather Service](http://api.openweathermap.org/)
